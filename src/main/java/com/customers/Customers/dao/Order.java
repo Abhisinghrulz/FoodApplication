@@ -1,4 +1,4 @@
-package com.customers.Customers.model;
+package com.customers.Customers.dao;
 
 import javax.persistence.*;
 

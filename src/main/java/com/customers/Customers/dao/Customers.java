@@ -1,4 +1,4 @@
-package com.customers.Customers.model;
+package com.customers.Customers.dao;
 
 import javax.persistence.*;
 
@@ -16,10 +16,10 @@ public class Customers {
     private String customerAddress;
     @Column(name = "CustomerBalance")
     private Float customerBalance;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "CustomerCartId")
     private CustomerCart customerCart;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "OrderId")
     private Order order;
     @Column(name = "FoodStatus")

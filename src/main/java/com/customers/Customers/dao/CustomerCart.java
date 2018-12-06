@@ -1,4 +1,4 @@
-package com.customers.Customers.model;
+package com.customers.Customers.dao;
 
 
 import javax.persistence.*;
@@ -13,7 +13,7 @@ public class CustomerCart {
     @GeneratedValue(strategy = GenerationType.AUTO)@Column(name = "CustomerCartId")
     private Integer customerCartId;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "CustomerCart_Dish", joinColumns = @JoinColumn(name = "CustomerId"), inverseJoinColumns = @JoinColumn(name = "DishId"))
     private Collection<Dish> dishes = new ArrayList<>();
 

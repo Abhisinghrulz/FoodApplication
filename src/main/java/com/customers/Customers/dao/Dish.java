@@ -1,14 +1,13 @@
-package com.customers.Customers.model;
+package com.customers.Customers.dao;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Dish")
 public class Dish {
-        @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)@Column(name = "DishId")
-        private Integer dishId;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)@Column(name = "DishId")
+    private Integer dishId;
     @Column(name = "DishName")
     private String dishName;
 
